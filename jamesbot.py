@@ -5,11 +5,11 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-"""@app.route('/ncss')
+@app.route('/ncss')
 def hello_ncss():
     return 'Yay!'
 
-@app.route('/greet')
+@app.route('/greet', methods=['GET', 'POST'])
 def greet_person():
     name = request.values.get('name')
     return f'Greetings {name}!'
@@ -21,7 +21,7 @@ def weather():
         return "It's so hot!"
     else:
         return f"The temprature is {temp}"
-"""
+
 if __name__ == '__main__':
     app.run()
 
